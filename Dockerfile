@@ -9,6 +9,7 @@ RUN npm run build
 RUN npm prune --production
 
 # RUN /usr/local/bin/node-prune
+RUN curl -sf https://gobinaries.com/tj/node-prune | sh
 RUN node-prune /usr/src/app/node_modules
 
 # ============================================
