@@ -8,7 +8,8 @@ RUN npm run build
 
 RUN npm prune --production
 
-RUN /usr/local/bin/node-prune
+# RUN /usr/local/bin/node-prune
+RUN node-prune /usr/src/app/node_modules
 
 # ============================================
 FROM ghcr.io/neruko-s/node-base:latest
